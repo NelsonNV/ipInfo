@@ -16,10 +16,9 @@ if (Astro.request.method === "POST") {
     }
   }
 }else{
-	const ip = await Astro.clientAddress
-	var res = await fetch('http://ipwho.is/'+ip)
+	let res = await fetch('http://ipwho.is/')
 	var data = await res.json()
-
+	console.log(data)
 }
 
 ---
